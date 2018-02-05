@@ -1,7 +1,6 @@
 # Dependencies
 - NodeJS v8 or greater
 - http-server (npm install -g http-server)
-- yarn (npm install -g yarn)
 
 # Development Setup
 1. First fork this repository into your account
