@@ -7,7 +7,7 @@
 1. First fork this repository into your account
 1. Clone the repository to your workspace using the command: ```git clone <repository-url>```
 1. cd into the repository: ```cd <project-directory>```
-1. Install dependencies using yarn command: ```yarn```
+1. Install dependencies using yarn command: ```npm install```
 1. Start http-server to preview the webpage: ```http-server -c-1```
 
 # Problem Statement
