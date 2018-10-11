@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>JavaScript Assignment</title>
 	<link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-	
-	<style>
-	section {
-		margin: 2em;
-	}
 
-	form {
-		margin: 2em;
-	}
-</style>
+	<style>
+		section {
+			margin: 2em;
+		}
+
+		form {
+			margin: 2em;
+		}
+	</style>
 </head>
+
 <body>
 	<section class="card">
 		<div class="card-header d-flex flex-row">
@@ -62,20 +64,45 @@
 		<form>
 			<div class="form-group">
 				<label for="countQueryRepositoryInput">Repository</label>
-				<input type="text" class="form-control" id="countQueryRepositoryInput" placeholder="Type repository name here">
+				<!-- <input type="text" class="form-control" id="countQueryRepositoryInput" placeholder="Type repository name here"> -->
+				<select class="form-control" id="countQueryRepositoryInput">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
 			</div>
 			<div class="form-group">
 				<label for="countQueryIssueType">Count</label>
 				<input type="text" class="form-control" id="countQueryIssueType" placeholder="Type count type (total / open / my_issues)">
 			</div>
-			<input type="submit" value="Go!" class="btn btn-primary">
-			<span id="count"></span>
+			<input type="submit" id="count" value="Go!" class="btn btn-primary" data-toggle="modal" data-target="#countModal">
+			<!-- <span id="count"></span> -->
 		</form>
+
+		<!-- Modal -->
+		<div id="countModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Issue Count: <span id="modal-count" class="font-weight-bold"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-	
+
 	<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	 crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 
 </body>
+
 </html>
