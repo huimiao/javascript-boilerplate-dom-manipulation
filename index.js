@@ -18,7 +18,7 @@ function requestGitRepoDetails() {
     const xhr = new XMLHttpRequest();
     xhr.timeout = 2000;
     xhr.onreadystatechange = function (e) {
-      if (xhr.readyState === 4) {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
 
         console.log("Ready State : " + xhr.readyState);
         if (xhr.status === 200) {
